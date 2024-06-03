@@ -28,32 +28,32 @@ class ProductView(View):
 		page_obj = paginator.get_page(page_number)		
 		return render(request, 'app/index1.html', {'page_obj':page_obj}) """
 
-from django.core.paginator import Paginator
-from django.shortcuts import render
-from .models import Product
+# from django.core.paginator import Paginator
+# from django.shortcuts import render
+# from .models import Product
 
-def ProductView1(request):
-    topwears = Product.objects.filter(category='TW')
-    bottomwears = Product.objects.filter(category='BW')
-    mobiles = Product.objects.filter(category='M')
+# def ProductView1(request):
+#     topwears = Product.objects.filter(category='TW')
+#     bottomwears = Product.objects.filter(category='BW')
+#     mobiles = Product.objects.filter(category='M')
 
-    topwears_paginator = Paginator(topwears, 3)
-    bottomwears_paginator = Paginator(bottomwears, 3)
-    mobiles_paginator = Paginator(mobiles, 3)
+#     topwears_paginator = Paginator(topwears, 3)
+#     bottomwears_paginator = Paginator(bottomwears, 3)
+#     mobiles_paginator = Paginator(mobiles, 3)
 
-    topwears_page_number = request.GET.get('topwears_page')
-    bottomwears_page_number = request.GET.get('bottomwears_page')
-    mobiles_page_number = request.GET.get('mobiles_page')
+#     topwears_page_number = request.GET.get('topwears_page')
+#     bottomwears_page_number = request.GET.get('bottomwears_page')
+#     mobiles_page_number = request.GET.get('mobiles_page')
 
-    topwears_page_obj = topwears_paginator.get_page(topwears_page_number)
-    bottomwears_page_obj = bottomwears_paginator.get_page(bottomwears_page_number)
-    mobiles_page_obj = mobiles_paginator.get_page(mobiles_page_number)
+#     topwears_page_obj = topwears_paginator.get_page(topwears_page_number)
+#     bottomwears_page_obj = bottomwears_paginator.get_page(bottomwears_page_number)
+#     mobiles_page_obj = mobiles_paginator.get_page(mobiles_page_number)
 
-    return render(request, 'app/index1.html', {
-        'topwears_page_obj': topwears_page_obj,
-        'bottomwears_page_obj': bottomwears_page_obj,
-        'mobiles_page_obj': mobiles_page_obj,
-    })
+#     return render(request, 'app/index1.html', {
+#         'topwears_page_obj': topwears_page_obj,
+#         'bottomwears_page_obj': bottomwears_page_obj,
+#         'mobiles_page_obj': mobiles_page_obj,
+#     })
 
 
 
