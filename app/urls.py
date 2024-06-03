@@ -6,8 +6,7 @@ from django.contrib.auth import views as auth_views
 from .forms import LoginForm, MyPasswordChangeForm, MyPasswordResetForm, MySetPasswordForm
 urlpatterns = [
     # path('', views.home),
-    path('index/', views.ProductView.as_view(), name="index"),
-    path('inde/', views.ProductView1, name="index1"),
+    path('', views.ProductView.as_view(), name="index"),
     path('search/', views.Search, name="search"),
     # path('product-detail', views.product_detail, name='product-detail'),
     path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='product-detail'),
