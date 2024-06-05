@@ -55,7 +55,7 @@ ROOT_URLCONF = 'shoppinglyx.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['gitlab/Django-tut/shopping/ShoppinglyX/app/templates'],
+        'DIRS': ['rahultrip123.github.io/django-project/ShoppinglyX/app/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
